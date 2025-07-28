@@ -1,0 +1,20 @@
+{
+    "update.mode": "none",
+    "breadcrumbs.enabled": false,
+    "explorer.compactFolders": false,
+    "window.commandCenter": false,
+    "workbench.colorTheme": "Material Theme Palenight",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.editor.labelFormat": "short",
+    "editor.fontSize": 14,
+    "editor.lineHeight": 1.65,
+    "editor.rulers": [80, 120],
+    "editor.renderLineHighlight": "gutter",
+    "editor.fontLigatures": true,
+    "editor.minimap.enabled": false,
+    "terminal.integrated.fontFamily": "Fira Code Nerd Font",
+    "terminal.integrated.fontSize": 13,
+    "editor.fontFamily": "Fira Code, Menlo, Monaco, 'Courier New', monospace",
+}
+
