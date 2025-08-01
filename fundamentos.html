@@ -1,0 +1,357 @@
+O que é HTML?
+
+É uma linguagem de marcação de hipertexto. Através de tags, como links, imagens e vídeos
+o HTML permite criar conteúdo interativo na web.
+
+Uma página HTML básica sempre começa com a seguinte estrutura:
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head> usada para configuracao da pagina
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minha Página</title> aparece na aba o nome
+</head>
+<body> o corpo, tudo o que aparece na tela
+  <h1>Olá, mundo!</h1>
+  <p>Este é o meu primeiro site.</p>
+</body>
+</html>
+```
+
+Explicando a estrutura:
+
+<!DOCTYPE html>` → Informa ao navegador que o documento é HTML5.
+<html>` → Elemento raiz que engloba todo o conteúdo.
+<head>` → Contém **metadados**, como título e configurações.
+<body>` → Contém **todo o conteúdo visível** da página.
+
+---
+
+2. Principais Tags do HTML
+
+
+html
+  <h1>Título Principal</h1>
+  <h2>Subtítulo</h2>
+  <p>Este é um parágrafo com informações.</p>
+
+
+2.2 Formatação de Texto
+
+<strong> → Negrito
+<em> → Itálico
+<u> → Sublinhado
+<mark> → Destacar texto
+<br> → Quebra de linha
+
+Exemplo
+<p>Este é um <strong>texto importante</strong> e este é <em>itálico</em>.</p>
+<p>Destacar com <mark>marcação</mark>.</p>
+
+
+Links e Imagens
+
+Links <a>
+
+  
+  <a href="https://www.google.com" target="_blank">Visitar Google</a>
+ 
+
+href → URL de destino
+target="_blank" → Abre em nova aba
+
+Imagens <img>
+
+
+  <img src="imagem.jpg" alt="Descrição da imagem" width="300">
+
+
+  src → Caminho da imagem
+  alt → Texto alternativo (importante para acessibilidade)
+
+
+
+Listas
+
+Listas Ordenadas <ol>
+Listas Não Ordenadas <ul>
+Itens da lista <li>
+
+
+<h3>Lista de Compras</h3>
+<ul>
+  <li>Pão</li>
+  <li>Leite</li>
+  <li>Ovos</li>
+</ul>
+
+<ol>
+  <li>Primeiro passo</li>
+  <li>Segundo passo</li>
+</ol>
+
+Tabelas
+
+* **Tags principais:**
+
+  * `<table>` → Cria tabela
+  * `<tr>` → Linha
+  * `<td>` → Célula
+  * `<th>` → Cabeçalho
+
+```html
+<table border="1">
+  <tr>
+    <th>Nome</th>
+    <th>Idade</th>
+  </tr>
+  <tr>
+    <td>Ana</td>
+    <td>25</td>
+  </tr>
+  <tr>
+    <td>João</td>
+    <td>30</td>
+  </tr>
+</table>
+```
+
+---
+
+Divisões e Estrutura
+
+<div> → Blocos de paragráfo dentro da página.
+<span> → Destina-se a trechos de texto na mesma linha sempre.
+
+
+<div style="background-color: lightblue;">
+  <h2>Seção da página</h2>
+  <p>Este é um parágrafo dentro de uma div.</p>
+</div>
+
+----
+
+<span> texto fica na mesma linha </span>
+---
+
+### **2.7 Formulários**
+
+* Usados para enviar informações do usuário.
+* **Principais tags:**
+
+  * `<form>` → Cria o formulário
+  * `<input>` → Campo de entrada
+  * `<label>` → Rótulo do campo
+  * `<button>` → Botão
+
+```html
+<form action="/enviar" method="post">
+  <label for="nome">Nome:</label>
+  <input type="text" id="nome" name="nome">
+  
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email">
+  
+  <button type="submit">Enviar</button>
+</form>
+```
+
+---
+
+Elementos Semânticos do HTML5
+    
+    <header> – Cabeçalho
+    
+    * Representa o cabeçalho de uma página ou seção.
+    * Normalmente contém logo, título, menus de navegação e links importantes**.
+    * Pode aparecer no topo do site **ou dentro de uma seção/artigo.
+    
+    
+    <header>
+      <h1>Meu Site</h1>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </header>
+    
+    
+    Fica no topo do site, como o cabeçalho de um jornal ou blog.
+        
+        <nav> – Navegação
+        
+          * Criar menus (principal ou secundário).
+          * Indicar ao navegador e mecanismos de busca onde estão os links de navegação.
+          * Onde fica no site:
+          Normalmente no cabeçalho <header>, mas pode aparecer em outros lugares, como rodapés ou barras laterais.
+    
+        <nav>
+          <ul>
+            <li><a href="#home">Início</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </nav>
+        
+          
+  
+    <main> – Conteúdo Principal
+    
+    * Representa o conteúdo principal da página.
+    * Deve ser único e conter as informações mais relevantes, **sem menus, barras laterais ou rodapés**.
+    * Ajuda os leitores de tela a irem direto ao conteúdo.
+    
+   
+    <main>
+      <h2>Bem-vindo ao meu site</h2>
+      <p>Aqui você encontra conteúdos e artigos interessantes.</p>
+    </main>
+    
+    
+    Fica no centro do site, como o corpo de uma notícia ou artigo.
+    
+    ---
+
+    <section> – Seção de Conteúdo, agrupar conteúdos relacionados dentro da página.
+        
+        Organizar o conteúdo principal em blocos lógicos.
+        
+        Dica: Cada <section> deve ter um título (<h1> a <h6>).
+        
+        Pode conter <article>, <aside> ou outras <section> dentro.
+        
+        <section>
+          <h2>Notícias Recentes</h2>
+          <p>Aqui estão as últimas novidades do nosso site.</p>
+        </section>
+
+        Uso: Criar blocos de conteúdo, como “Sobre nós”, “Serviços” ou “Notícias”.
+    
+
+        <article> – Artigo/Conteúdo Independente
+            
+            Usado para artigos, posts de blog, comentários, produtos, reviews etc.
+            
+            Ideal quando o conteúdo pode ser distribuído fora do contexto da página (ex.: feed de notícias).
+            
+            Diferença para <section>:
+            
+            <article> é autônomo e completo.
+            <section> é um agrupamento temático, que pode conter vários artigos.
+            
+            
+            <article>
+              <h2>Nova atualização do HTML</h2>
+              <p>O HTML5 trouxe novas tags semânticas para organizar melhor o conteúdo.</p>
+            </article>
+
+            Uso: Post de blog, notícia, produto ou qualquer item independente.
+
+
+    <aside> – Barra Lateral
+    
+    Usado para conteúdo complementar ou secundário, como:
+    
+      * Anúncios
+      * Links relacionados
+      * Widgets e informações extras
+    * Geralmente aparece **na lateral do site** (direita ou esquerda).
+    
+   
+    <aside>
+      <h3>Links úteis</h3>
+      <ul>
+        <li><a href="#noticias">Últimas notícias</a></li>
+        <li><a href="#dicas">Dicas de HTML</a></li>
+      </ul>
+    </aside>
+    
+    
+    Fica ao lado do conteúdo principal, como uma sidebar.
+    
+    ---
+    
+    <footer> – Rodapé
+    
+    Representa o rodapé da página ou de uma seção.
+    Normalmente contém:
+    
+      * Direitos autorais
+      * Informações de contato
+      * Links para redes sociais
+      * Políticas e termos
+    
+   
+    <footer>
+      <p>&copy; 2025 Meu Site. Todos os direitos reservados.</p>
+      <p><a href="#contato">Entre em contato</a></p>
+    </footer>
+    
+    
+ Fica no final do site, como o rodapé de uma página de livro ou documento.
+    
+
+    <body>
+      <header>
+        <h1>Meu Site</h1>
+        <nav>
+          <a href="#home">Home</a>
+          <a href="#sobre">Sobre</a>
+          <a href="#contato">Contato</a>
+        </nav>
+      </header>
+    
+      <main>
+        <h2>Bem-vindo!</h2>
+        <p>Este é o conteúdo principal da página.</p>
+      </main>
+    
+      <aside>
+        <h3>Links úteis</h3>
+        <ul>
+          <li><a href="#">Últimas notícias</a></li>
+          <li><a href="#">Dicas HTML</a></li>
+        </ul>
+      </aside>
+    
+      <footer>
+        <p>&copy; 2025 - Todos os direitos reservados</p>
+      </footer>
+    </body>
+
+Outro exemplo:
+
+<body>
+    <header>
+      <h1>Portal de Notícias</h1>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#tecnologia">Tecnologia</a>
+        <a href="#esportes">Esportes</a>
+      </nav>
+    </header>
+  
+    <main>
+      <section id="tecnologia">
+        <h2>Tecnologia</h2>
+        
+        <article>
+          <h3>Lançamento de novo smartphone</h3>
+          <p>O modelo X foi anunciado com recursos inovadores.</p>
+        </article>
+  
+        <article>
+          <h3>Avanços em Inteligência Artificial</h3>
+          <p>Novos sistemas estão revolucionando a indústria.</p>
+        </article>
+      </section>
+    </main>
+  
+    <footer>
+      <p>&copy; 2025 Portal de Notícias</p>
+    </footer>
+  </body>
+  
