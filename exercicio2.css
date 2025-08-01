@@ -1,0 +1,13 @@
+h1 {
+  font-size: 50px;
+  font-weight: bold;
+  background: linear-gradient(
+    to right,
+    #f6479f,
+    #0080ff
+  ); /* degrade rosa para amarelo */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
